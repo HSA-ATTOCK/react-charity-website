@@ -1,9 +1,25 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import HeroImage from "../pages/images/hero.jpg";
 import Testimonials from "../components/Testimonials";
 import Causes from "../components/Causes";
+import { fetchCampaigns } from "../api/campaigns"; // Make sure this exists
 
 const Home = () => {
+  const [campaigns, setCampaigns] = useState([]);
+
+  useEffect(() => {
+    const getCampaigns = async () => {
+      try {
+        const data = await fetchCampaigns();
+        setCampaigns(data);
+      } catch (err) {
+        console.error("Failed to load campaigns:", err);
+      }
+    };
+    getCampaigns();
+  }, []);
+
   return (
     <div className="home-page">
       {/* Hero Section */}
@@ -58,6 +74,23 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* Campaigns (Dynamic) */}
+      {campaigns.length > 0 && (
+        <section className="campaigns-section">
+          <div className="container">
+            <h2>Latest Campaigns</h2>
+            <div className="campaign-grid">
+              {campaigns.map((campaign) => (
+                <div key={campaign.id} className="campaign-card">
+                  <h3>{campaign.title}</h3>
+                  <p>{campaign.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Testimonials */}
       <Testimonials />
