@@ -2,29 +2,43 @@
   "version": 2,
   "builds": [
     {
-      "src": "server.js",
-      "use": "@vercel/node"
-    },
-    {
       "src": "package.json",
       "use": "@vercel/static-build",
-      "config": { "distDir": "build" }
+      "config": {
+        "distDir": "build",
+        "cleanUrls": true
+      }
     }
   ],
   "routes": [
     {
       "src": "/static/(.*)",
+      "headers": {
+        "Cache-Control": "public, max-age=31536000, immutable"
+      },
       "dest": "/static/$1"
     },
     {
       "src": "/(.*)",
-      "dest": "/"
+      "dest": "/index.html",
+      "headers": {
+        "Cache-Control": "no-cache"
+      }
     }
   ],
-  "rewrites": [
+  "headers": [
     {
       "source": "/(.*)",
-      "destination": "/"
-    }
-  ]
-}
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data:; script-src 'self' 'unsafe-inline' 'unsafe-eval'"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+      
