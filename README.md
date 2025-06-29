@@ -3,11 +3,11 @@
 ````markdown
 # Helping Hands - Charity Website (React)
 
+A fully responsive charity/non-profit website built with React, featuring donation functionality, volunteer sign-up, and multiple informational pages.
+
 ## 📸 Preview
 
 ![Charity Website Screenshot](screenshot.png)
-
-A fully responsive charity/non-profit website built with React, featuring donation functionality, volunteer sign-up, and multiple informational pages.
 
 ## 🌟 Features
 
