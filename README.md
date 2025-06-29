@@ -7,7 +7,7 @@ A fully responsive charity/non-profit website built with React, featuring donati
 
 ## 📸 Preview
 
-![Charity Website Screenshot](screenshot.png)
+![Charity Website Screenshot](preview.png)
 
 ## 🌟 Features
 
