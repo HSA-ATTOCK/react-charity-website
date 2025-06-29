@@ -2,10 +2,10 @@
 
 ## 📝 **README.md** for GitHub Repository
 
-```markdown
+````markdown
 # Helping Hands - Charity Website (React)
 
-![Charity Website Screenshot](./public/screenshot.png)
+![Charity Website Screenshot](./screenshot.png)
 
 A fully responsive charity/non-profit website built with React, featuring donation functionality, volunteer sign-up, and multiple informational pages.
 
@@ -13,7 +13,7 @@ A fully responsive charity/non-profit website built with React, featuring donati
 
 - **Responsive Design**: Works on all device sizes
 - **Interactive Forms**: Donation and Volunteer forms with validation
-- **Multiple Pages**: 
+- **Multiple Pages**:
   - Homepage with hero section and call-to-action
   - About Us with organization story and values
   - Causes/Programs with progress tracking
@@ -34,6 +34,7 @@ A fully responsive charity/non-profit website built with React, featuring donati
 ## 🚀 Getting Started
 
 ### Prerequisites
+
 - Node.js (v14+)
 - npm (v6+) or yarn
 
@@ -44,8 +45,10 @@ A fully responsive charity/non-profit website built with React, featuring donati
    git clone https://github.com/your-username/charity-website-react.git
    cd charity-website-react
    ```
+````
 
 2. Install dependencies:
+
    ```bash
    npm install
    # or
@@ -53,6 +56,7 @@ A fully responsive charity/non-profit website built with React, featuring donati
    ```
 
 3. Start the development server:
+
    ```bash
    npm start
    # or
@@ -115,12 +119,15 @@ This project is licensed under the MIT License.
 - React documentation
 - Create React App
 - Various open-source UI libraries for inspiration
+
 ```
 
 ## 📌 **Repository Description** (GitHub repo "About" section)
 
 ```
+
 A responsive charity/non-profit website built with React featuring:
+
 - Multiple pages (Home, About, Causes, Donate, Volunteer, Contact)
 - Interactive donation and volunteer forms
 - Responsive design for all devices
@@ -128,9 +135,11 @@ A responsive charity/non-profit website built with React featuring:
 - Easy to customize for any non-profit organization
 
 Perfect for:
+
 - Charities looking for a modern web presence
 - Developers learning React and responsive design
 - Non-profits needing a customizable template
+
 ```
 
 ---
@@ -142,3 +151,4 @@ Built with ❤️ using React + Express
 [GitHub Profile](https://github.com/HSA-ATTOCK)
 
 ---
+```
