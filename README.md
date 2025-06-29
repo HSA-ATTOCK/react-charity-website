@@ -1,6 +1,5 @@
 # Charity Website - Created for Client
 
-````markdown
 # Helping Hands - Charity Website (React)
 
 A fully responsive charity/non-profit website built with React, featuring donation functionality, volunteer sign-up, and multiple informational pages.
@@ -45,6 +44,7 @@ A fully responsive charity/non-profit website built with React, featuring donati
    git clone https://github.com/your-username/charity-website-react.git
    cd charity-website-react
    ```
+
 ````
 
 2. Install dependencies:
@@ -152,3 +152,4 @@ Built with ❤️ using React + Express
 
 ---
 ```
+````
